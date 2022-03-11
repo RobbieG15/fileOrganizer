@@ -27,4 +27,5 @@ for file in files:
     
     for word in keyWords:
         if word.lower() in file.lower():
-            shutil.move(path + '/' + file, path + '/' + word + '/' + file)
+            if file != word:
+                shutil.move(path + '/' + file, path + '/' + word + '/' + file)
